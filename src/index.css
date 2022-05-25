@@ -97,3 +97,46 @@ input {
 .bold {
   font-weight: 700;
 }
+.top{
+  position: relative;
+  width: 300px;
+  margin: 10px;
+}
+#test{
+  position: relative; 
+
+  
+}
+#Sun{
+  position: absolute;
+  left: 0px;
+  top: 0;
+  z-index: 1;
+}
+#Extern_beam{
+  animation: ExternalBeam 7s  infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes ExternalBeam {
+  from{
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(45deg);
+
+  }
+}
+#Inside_beam{
+  animation: Inside_beam 7s  infinite alternate ;
+  transform-origin: center;
+}
+@keyframes Inside_beam {
+  from{
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(20deg);
+
+  }
+}
