@@ -79,6 +79,7 @@ input {
 .application .description {
   position: relative;
   right: -90%;
+  top: 15%;
   transform-origin: 0 0;
   transform: rotate(269deg);
 }
@@ -101,17 +102,22 @@ input {
   position: relative;
   width: 300px;
   margin: 10px;
+  border: #f8f8f8 solid;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background: linear-gradient(to bottom, rgba(255,0,0,0) 20%,#FFF4EA 20%);
 }
-#test{
-  position: relative; 
-
-  
+#adress{
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10%;
 }
 #Sun{
-  position: absolute;
-  left: 0px;
-  top: 0;
   z-index: 1;
+  margin: 50px;
 }
 #Extern_beam{
   animation: ExternalBeam 7s  infinite alternate;
@@ -138,5 +144,120 @@ input {
   to {
     transform: rotateZ(20deg);
 
+  }
+}
+
+
+/* Sun */
+#Beam{
+  animation: beam 10s  infinite linear ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes beam {
+  from{
+    transform: rotateZ(0deg) ;
+  }
+  to {
+    transform: rotateZ(360deg);
+
+  }
+}
+#Sun{
+  animation: sun 5s  ease-in-out infinite alternate ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes sun {
+  from{
+    transform: translateX(0px) ;
+  }
+  to {
+    transform: translateX(15px) ;
+  }
+}
+/* Cloud */
+#Cloud{
+  animation: cloud 5s  ease-in-out infinite alternate ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes cloud {
+  from{
+    transform: translateX(0px) ;
+  }
+  to {
+    transform: translateX(-10px) ;
+  }
+}
+/* Rain */
+#rainTop ,#rainTop_2,#rainTop_3,#rainTop_4,#rainTop_5,#rainTop_6{
+  animation: rainTop 2s  ease-in-out infinite  ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes rainTop {
+  from{
+    transform: translateY(-10px)  ;
+  }
+  to {
+    transform:translateY(0px)  ;
+  }
+}
+#rainBot,#rainBot_2,#rainBot_3,#rainBot_4{                                                            
+  animation: rainBot 2s  ease-in-out infinite  ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes rainBot {
+  from{
+    transform: translateY(-25px)  ;
+  }
+  to {
+    transform:translateY(0px)  ;
+  }
+}
+
+/* Mist */
+
+#MistTop, #MistBot{
+  animation: mistTopBot 2s  ease-in-out infinite alternate ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes mistTopBot {
+  from{
+    transform: translateX(-50px)  ;
+  }
+  to {
+    transform:translateX(0px)  ;
+  }
+}
+#MistMiddle{
+  animation: mistMiddle 2s  ease-in-out infinite alternate ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes mistMiddle {
+  from{
+    transform: translateX(0px)  ;
+  }
+  to {
+    transform:translateX(-50px)  ;
+  }
+}
+
+#Flash{
+  animation: flash 2s  ease-in-out infinite alternate ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes flash {
+  from{
+    transform: translateY(0px)  ;
+  }
+  to {
+    transform:translateY(10px)  ;
   }
 }
