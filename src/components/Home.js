@@ -75,7 +75,7 @@ function Home() {
             </div>
             <div className="container">
                 {data.coord === undefined &&
-                    <div>
+                    <div className="questionMark">
                         <QuestionMark />
                     </div>
                 } 
@@ -113,16 +113,7 @@ function Home() {
                         </div>
                     </div>
                 }
-                
-
-                    
-                <div className="bottom">
-                </div>
-
-
-
             </div>
-            
         </div>
     );
 }

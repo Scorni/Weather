@@ -84,17 +84,6 @@ input {
   transform: rotate(269deg);
 }
 
-.application .bottom {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  width: 100%;
-  margin: 1rem auto;
-  padding: 1rem;
-  border-radius: 12px;
-  background-color: rgba(255,255,255, 0.2);
-}
-
 .bold {
   font-weight: 700;
 }
@@ -248,6 +237,7 @@ input {
   }
 }
 
+/* Tunderstorm */
 #Flash{
   animation: flash 2s  ease-in-out infinite alternate ;
   transform-origin: center;
@@ -260,4 +250,38 @@ input {
   to {
     transform:translateY(10px)  ;
   }
+}
+
+/* questionMark */
+.questionMark{
+  text-align: center;
+}
+#QuestionMark{
+  animation: questionMark 3s  ease-in-out infinite alternate ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes questionMark{
+  from{
+    transform:matrix(1,0.10,-0.10,1,0,0);
+  }
+  to{
+    transform :matrix(1,-0.10,0.10,1,-20,-20);
+  }
+}
+#Arm,#Vector_29{
+  animation: arm 3s  ease-in-out infinite alternate ;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes arm{
+  from{
+    transform:matrix(1,0.25,-0.10,1,0,0);
+  }
+  to{
+    transform :matrix(1,-0.10,0.10,1,0,0);
+  }
+}
+#Arm_2{
+  
 }
